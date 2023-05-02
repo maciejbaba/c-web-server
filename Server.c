@@ -25,5 +25,7 @@ struct Server server_constructor(int domain, int service, int protocol, unsigned
     exit(1);
   }
 
+  bind(server.socket, (struct sockadrr *)&server.address, sizeof(server.address)); 
+
   return server;
 };
